@@ -7,8 +7,8 @@ class Cocktail_Card extends Component {
     }
     render() {
         return (
-            <Card>
-                <Card.Img variant="top" src={this.props.Image}/>
+            <Card style = {{padding: '10px', margin: '10px', width: '18rem', display: 'inline-block'}}>
+                <Card.Img style={{height: '240px', width: '265px'}} src={this.props.Image}/>
                 <Card.Body>
                     <Card.Title>{this.props.Name}</Card.Title>
                 </Card.Body>

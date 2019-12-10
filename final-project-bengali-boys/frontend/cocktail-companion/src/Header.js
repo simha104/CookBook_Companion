@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Image from 'react-bootstrap/Image';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 
 class Header extends Component {
@@ -10,13 +9,12 @@ class Header extends Component {
     }
     render() {
         return (
-            <div style={{ display: flex, position: relative }}>
-                <Jumbotron fluid>
-                    <Container>
-                    <Image src="/assets/header.jpg" fluid />
-                        <h1>Cookbook Companion</h1>
-                    </Container>
-                </Jumbotron>
+            <div>
+                <Container style={{}}>
+                    <h1 style={{position: 'relative'}}>Cookbook Companion</h1>
+                    {/* <Image style={{position: 'relative', height: 'auto', width: '100%' }} src="/assets/header.jpg" /> */}
+
+                </Container>
             </div>
         );
     }

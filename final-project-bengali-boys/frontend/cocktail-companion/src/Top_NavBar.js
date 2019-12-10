@@ -15,7 +15,7 @@ class Top_NavBar extends Component {
     render() {
         return (
             <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home" style={{ color: 'black' }} >Cookbook Companion</Navbar.Brand>
+                <Navbar.Brand href="#home" style={{ color: 'black' }} >Filters: </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
@@ -43,7 +43,7 @@ class Top_NavBar extends Component {
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">All</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#apply" style={{ color: 'black' }} >Apply</Nav.Link>
+                        <Button variant="secondary">Apply</Button>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />

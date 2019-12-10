@@ -64,7 +64,7 @@ var json_data = [
         "Difficulty": "Easy",
         "Ethnicity": "Mexican",
         "Time": "1.0",
-        "Image": "tacos",
+        "Image": "tacos.jpg",
         "Site:": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
     },
     {
@@ -94,11 +94,11 @@ class Cocktail_Card_Container extends Component {
     ReptileList() {
       
         return (
-          <ol>
+          <div>
             {json_data.map(food_item =>
                  <Cocktail_Card Name={food_item.Name} Image={"/assets/"+food_item.Image}></Cocktail_Card>
                  )}
-          </ol>
+          </div>
         );
     }
     render() { 
