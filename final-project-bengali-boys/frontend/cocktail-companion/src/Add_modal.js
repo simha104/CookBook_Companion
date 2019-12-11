@@ -10,8 +10,9 @@ class Add_modal extends Component {
   }
   render() {
     return (
-      <Form>
-        <Form.Label>Add new recipe:</Form.Label>
+      <Form style={{ margin: "15px" }}>
+        {/* <Form.Label style={}>Add new recipe:</Form.Label> */}
+        <h2>Add New Recipe:</h2>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridTitle">
             <Form.Label>Title</Form.Label>
@@ -62,7 +63,7 @@ class Add_modal extends Component {
           </Form.Group>
         </Form.Row>
 
-        <Button variant="primary" type="submit">
+        <Button style={{ margin: "15px" }} variant="primary" type="submit">
           Submit
         </Button>
       </Form>
