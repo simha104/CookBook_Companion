@@ -97,7 +97,7 @@ class Cocktail_Card_Container extends Component {
         return (
           <div>
             {json_data.map(food_item =>
-                 <Cocktail_Card Name={food_item.Name} Difficulty={food_item.Difficulty} Ethnicity={food_item.Ethnicity} Time={food_item.Time} Image={"/assets/"+food_item.Image} Site={food_item.Site}></Cocktail_Card>
+                 <Cocktail_Card Name={food_item.Name} Site={food_item.Site} Difficulty={food_item.Difficulty} Ethnicity={food_item.Ethnicity} Time={food_item.Time} Image={"/assets/"+food_item.Image} Site={food_item.Site}></Cocktail_Card>
                  )}
           </div>
         );

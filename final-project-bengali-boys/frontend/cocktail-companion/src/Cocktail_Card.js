@@ -6,14 +6,22 @@ class Cocktail_Card extends Component {
     constructor(props) {
         super(props);
         this.state = {}
+        this.handleClick = this.handleClick.bind(this);
     }
+
+
+    handleClick(){
+        window.open(this.props.Site);
+        console.log(this.props.Site);
+    }
+
     render() {
         return (
             <Card style = {{padding: '10px', margin: '10px', width: '18rem', display: 'inline-block'}}>
                 <Card.Img style={{height: '240px', width: '265px'}} src={this.props.Image}/>
                 <Card.Body>
                     <Card.Title>{this.props.Name}</Card.Title>
-                    <Button variant="primary">Recipe</Button>
+                    <Button variant="primary" onClick = {this.handleClick}>Recipe</Button>
                 </Card.Body>
             </Card>
         );
