@@ -5,7 +5,7 @@
         "Ethnicity": "American",
         "Time": "2.5",
         "Image": "burger.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/24685/blue-cheese-burgers/"
+        "Site": "https://www.allrecipes.com/recipe/24685/blue-cheese-burgers/"
     },
     {
         "Name": "Margherita Pizza",
@@ -13,7 +13,7 @@
         "Ethnicity": "Italian",
         "Time": "0.5",
         "Image": "pizza.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/275573/margherita-pizza-with-sausage-and-pesto/"
+        "Site": "https://www.allrecipes.com/recipe/275573/margherita-pizza-with-sausage-and-pesto/"
     },
     {
         "Name": "Japanese Curry",
@@ -21,7 +21,7 @@
         "Ethnicity": "Asian",
         "Time": "1.5",
         "Image": "curry.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/274077/japanese-curry/"
+        "Site": "https://www.allrecipes.com/recipe/274077/japanese-curry/"
     },
     {
         "Name": "Pasta Pomodoro",
@@ -29,7 +29,7 @@
         "Ethnicity": "Italian",
         "Time": "0.5",
         "Image": "pasta.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/23847/pasta-pomodoro/"
+        "Site": "https://www.allrecipes.com/recipe/23847/pasta-pomodoro/"
     },
     {
         "Name": "Beef Lasagana",
@@ -37,7 +37,7 @@
         "Ethnicity": "Italian",
         "Time": "1.5",
         "Image": "lasagna.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/220346/eggplant-and-ground-beef-lasagna/"
+        "Site": "https://www.allrecipes.com/recipe/220346/eggplant-and-ground-beef-lasagna/"
     },
     {
         "Name": "Pork Fried Rice",
@@ -45,7 +45,7 @@
         "Ethnicity": "Asian",
         "Time": "0.5",
         "Image": "rice.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/230818/pork-fried-rice/"
+        "Site": "https://www.allrecipes.com/recipe/230818/pork-fried-rice/"
     },
     {
         "Name": "Chicken Quesadillas",
@@ -53,15 +53,15 @@
         "Ethnicity": "Mexican",
         "Time": "1.0",
         "Image": "quesadilla.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/21659/chicken-quesadillas/"
+        "Site": "https://www.allrecipes.com/recipe/21659/chicken-quesadillas/"
     },
     {
         "Name": "Fish Tacos",
         "Difficulty": "Easy",
         "Ethnicity": "Mexican",
         "Time": "1.0",
-        "Image": "tacos",
-        "Site:": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
+        "Image": "tacos.jpg",
+        "Site": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
     },
     {
         "Name": "Filipino Adobo",
@@ -69,7 +69,7 @@
         "Ethnicity": "Asian",
         "Time": "1.0",
         "Image": "adobo.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/128699/famous-chicken-adobo/"
+        "Site": "https://www.allrecipes.com/recipe/128699/famous-chicken-adobo/"
     },
     {
         "Name": "Fluffy Pancakes",
@@ -77,6 +77,6 @@
         "Ethnicity": "American",
         "Time": "0.5",
         "Image": "pancakes.jpg",
-        "Site:": "https://www.allrecipes.com/recipe/162760/fluffy-pancakes/"
+        "Site": "https://www.allrecipes.com/recipe/162760/fluffy-pancakes/"
     }
 ]
