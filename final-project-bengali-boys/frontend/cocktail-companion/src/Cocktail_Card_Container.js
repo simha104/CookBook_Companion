@@ -90,14 +90,59 @@ var json_data = require("./food.json");
 class Cocktail_Card_Container extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
+            food_item: json_data,
+            prev_filters: this.props.filter,
+
+        }
+       
+    }
+
+    CheckFilters(temp){
+        console.log(this.props.filter);
+        if(this.props.filter){
+            console.log("filter exists:")
+            console.log(this.props.filter);
+            if((temp.Ethnicity != this.props.filter.Ethnicity) && this.props.filter.Ethnicity != "All"){
+                console.log("false");
+                return false;
+            }
+            if((temp.Difficulty != this.props.filter.Difficulty) && this.props.filter.Difficulty != "All"){
+                console.log("false");
+                return false;
+            }
+            if((temp.Time != this.props.filter.Time) && this.props.filter.Time != "All"){
+                console.log("false");
+                return false;
+            }
+        }
+        console.log("true");
+        return true;
+    }
+
+    componentWillReceiveProps(){
+            this.state.food_item = [];
+            console.log("filters changed");
+            this.setState({food_item: this.state.food_item});
+            this.ApplyFilters();
+        
+    }
+
+    ApplyFilters(){
+        if(this.props.filter){
+            for(let i = 0; i < json_data.length; i++){
+                if(this.CheckFilters(json_data[i])){
+                    this.state.food_item.push(json_data[i]);
+                }
+            }
         }
     }
+
     FoodList() {
         return (
           <div>
-            {json_data.map(food_item =>
-                 <Cocktail_Card Name={food_item.Name} Site={food_item.Site} Difficulty={food_item.Difficulty} Ethnicity={food_item.Ethnicity} Time={food_item.Time} Image={"/assets/"+food_item.Image} Site={food_item.Site}></Cocktail_Card>
+            {this.state.food_item.map(food_list =>
+                 <Cocktail_Card Name={food_list.Name} Site={food_list.Site} Difficulty={food_list.Difficulty} Ethnicity={food_list.Ethnicity} Time={food_list.Time} Image={"/assets/"+food_list.Image} Site={food_list.Site}></Cocktail_Card>
                  )}
           </div>
         );
