@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -11,11 +10,13 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongojs": "^2.6.0",
+    "mongodb": "^3.4.0",
+    "mongojs": "^3.1.0",
     "mongoose": "^5.8.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.1"
-  }
+  },
+  "description": ""
 }

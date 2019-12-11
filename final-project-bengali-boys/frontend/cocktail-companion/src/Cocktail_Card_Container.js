@@ -3,7 +3,6 @@ import Cocktail_Card from './Cocktail_Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Top_NavBar from './Top_NavBar';
 
-var json_data = require("./food.json");
 //[
 //     {
 //         "Name": "Blue Cheese Burger",
@@ -87,15 +86,17 @@ var json_data = require("./food.json");
 //     }
 // ]
 
+//bruh
+
 class Cocktail_Card_Container extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            food_item: json_data,
+            food_item: [],
             prev_filters: this.props.filter,
 
         }
-       
+        this.retrieve_food = this.retrieve_food.bind(this);
     }
 
     CheckFilters(temp){
@@ -128,11 +129,17 @@ class Cocktail_Card_Container extends Component {
         
     }
 
+    componentWillMount(){
+        this.retrieve_food();
+    }
+
     ApplyFilters(){
+        let temp = this.state.food_item;
+        this.state.food_item = [];
         if(this.props.filter){
-            for(let i = 0; i < json_data.length; i++){
-                if(this.CheckFilters(json_data[i])){
-                    this.state.food_item.push(json_data[i]);
+            for(let i = 0; i < temp.length; i++){
+                if(this.CheckFilters(temp[i])){
+                    this.state.food_item.push(temp[i]);
                 }
             }
         }
