@@ -6,6 +6,13 @@ const fs = require('fs');
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+const cors = require('cors');
+
+let food_data = fs.readFileSync('food.json');
+app.use(cors());
+app.get('/food_data', function (req, res) {
+    res.json(food_data);
+});
 
 //mongoose.Promise = global.Promise;
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true });
@@ -27,9 +34,3 @@ app.listen(3000, function () {
     console.log("== Server is listening to port", 3000);
 });
 
-
-
-let food_data = fs.readFileSync('food.json');
-app.get('/food_data', function (req, res) {
-    res.json(food_data);
-});

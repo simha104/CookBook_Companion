@@ -90,26 +90,60 @@ var json_data = require("./food.json");
 class Cocktail_Card_Container extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
+            food_items: []
         }
+        this.retrieve_food = this.retrieve_food.bind(this);
+        
     }
+
+    componentWillMount(){
+        this.retrieve_food();
+    }
+
     FoodList() {
         return (
-          <div>
-            {json_data.map(food_item =>
-                 <Cocktail_Card Name={food_item.Name} Site={food_item.Site} Difficulty={food_item.Difficulty} Ethnicity={food_item.Ethnicity} Time={food_item.Time} Image={"/assets/"+food_item.Image} Site={food_item.Site}></Cocktail_Card>
-                 )}
-          </div>
+            <div>
+                {this.state.food_items.map(food_item =>
+                    <Cocktail_Card Name={food_item.Name} Site={food_item.Site} Difficulty={food_item.Difficulty} Ethnicity={food_item.Ethnicity} Time={food_item.Time} Image={"/assets/" + food_item.Image} Site={food_item.Site}></Cocktail_Card>
+                )}
+            </div>
         );
     }
-    render() { 
-        return ( 
-        <div>
-        {this.FoodList()}
-        <CardGroup>
-        </CardGroup>
-       </div> );
+
+    retrieve_food = ()=> {
+        fetch('http://localhost:3000/foodsite')
+            .then(
+                function (response) {
+                    console.log(response);
+                    if (response.status !== 200) {
+                        console.log('Looks like there was a problem. Status Code: ' +
+                            response.status);
+                        return;
+                    }
+
+                    // Examine the text in the response
+                    response.json().then(function (data) {
+                        this.setState({food_items: data});
+                    }.bind(this));
+                }.bind(this)
+            )
+            .catch(function (err) {
+                console.log('Fetch Error :-S', err);
+            });
     }
+
+
+
+    render() {
+        return (
+            <div>
+                {this.FoodList()}
+                <CardGroup>
+                </CardGroup>
+            </div>);
+    }
+
 }
- 
+
 export default Cocktail_Card_Container;

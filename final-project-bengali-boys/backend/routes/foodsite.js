@@ -30,7 +30,7 @@ router.post('/', async function(req, res) {
     });
     try {
         const newFood = await a_food.save();
-        res.status(201).json(newFood);
+        res.status(200).json(newFood);
     }
     catch(err){
         res.status(400).json({message: err.message}); 
