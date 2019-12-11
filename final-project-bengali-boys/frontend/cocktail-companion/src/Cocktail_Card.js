@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 class Cocktail_Card extends Component {
     constructor(props) {
         super(props);
@@ -11,6 +12,7 @@ class Cocktail_Card extends Component {
                 <Card.Img style={{height: '240px', width: '265px'}} src={this.props.Image}/>
                 <Card.Body>
                     <Card.Title>{this.props.Name}</Card.Title>
+                    <Button variant="primary">Recipe</Button>
                 </Card.Body>
             </Card>
         );
