@@ -91,7 +91,6 @@ class Cocktail_Card_Container extends Component {
     constructor(props) {
         super(props);
         this.state = {
-<<<<<<< HEAD
             food_item: json_data,
             prev_filters: this.props.filter,
 
@@ -136,15 +135,11 @@ class Cocktail_Card_Container extends Component {
                     this.state.food_item.push(json_data[i]);
                 }
             }
-=======
-            food_items: []
->>>>>>> 407dba0ddece5f42c7089b540569bc2aa7c26758
         }
         this.retrieve_food = this.retrieve_food.bind(this);
         
     }
 
-<<<<<<< HEAD
     FoodList() {
         return (
           <div>
@@ -152,19 +147,6 @@ class Cocktail_Card_Container extends Component {
                  <Cocktail_Card Name={food_list.Name} Site={food_list.Site} Difficulty={food_list.Difficulty} Ethnicity={food_list.Ethnicity} Time={food_list.Time} Image={"/assets/"+food_list.Image} Site={food_list.Site}></Cocktail_Card>
                  )}
           </div>
-=======
-    componentWillMount(){
-        this.retrieve_food();
-    }
-
-    FoodList() {
-        return (
-            <div>
-                {this.state.food_items.map(food_item =>
-                    <Cocktail_Card Name={food_item.Name} Site={food_item.Site} Difficulty={food_item.Difficulty} Ethnicity={food_item.Ethnicity} Time={food_item.Time} Image={"/assets/" + food_item.Image} Site={food_item.Site}></Cocktail_Card>
-                )}
-            </div>
->>>>>>> 407dba0ddece5f42c7089b540569bc2aa7c26758
         );
     }
 
