@@ -18,7 +18,7 @@ const foodsite_schema = new mongoose.Schema({
     },
 
     Time: {
-        type: Number,
+        type: String,
         required: true
     },
 

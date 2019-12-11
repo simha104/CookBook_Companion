@@ -77,10 +77,10 @@ class Top_NavBar extends Component {
                         </NavDropdown>
                         <Button variant="secondary" onClick = {this.createFilter}>Apply</Button>
                     </Nav>
-                    <Form inline>
+                    {/* <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-primary">Search</Button>
-                    </Form>
+                    </Form> */}
                 </Navbar.Collapse>
             </Navbar>
             <Cocktail_Card_Container filter = {this.state.finalFilter} ></Cocktail_Card_Container>

@@ -33,7 +33,7 @@ router.post('/', async function(req, res) {
         res.status(200).json(newFood);
     }
     catch(err){
-        res.status(400).json({message: err.message}); 
+        res.status(400).json({message: "bruh"}); 
     }
 });
 
