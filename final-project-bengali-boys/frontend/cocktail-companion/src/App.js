@@ -12,7 +12,6 @@ function App() {
     <div>
       <Header></Header>
       <Top_NavBar></Top_NavBar>
-      <Cocktail_Card_Container></Cocktail_Card_Container>
     </div>
   );
 }
