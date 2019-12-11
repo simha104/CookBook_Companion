@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
+<<<<<<< HEAD
 import Button from 'react-bootstrap/Button';
+=======
+import Container from 'react-bootstrap/Container';
+>>>>>>> b1966f07f631720841293588c6843b4b37d43ca0
 class Cocktail_Card extends Component {
     constructor(props) {
         super(props);

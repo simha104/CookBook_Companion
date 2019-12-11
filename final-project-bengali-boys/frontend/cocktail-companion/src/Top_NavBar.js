@@ -30,18 +30,18 @@ class Top_NavBar extends Component {
                             <NavDropdown.Item href="#action/3.1">American</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Asian</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Italian</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Mexican</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">Mexican</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">All</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.5">All</NavDropdown.Item>
                         </NavDropdown>
                         <NavDropdown title="Time" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">0.5 hours</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">1.0 hours</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">1.5 hours</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">2.0 hours</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">2.5 hours</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.4">2.0 hours</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.5">2.5 hours</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">All</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.6">All</NavDropdown.Item>
                         </NavDropdown>
                         <Button variant="secondary">Apply</Button>
                     </Nav>

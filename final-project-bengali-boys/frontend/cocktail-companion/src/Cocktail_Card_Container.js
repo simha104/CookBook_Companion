@@ -93,8 +93,7 @@ class Cocktail_Card_Container extends Component {
         this.state = { 
         }
     }
-    ReptileList() {
-      
+    FoodList() {
         return (
           <div>
             {json_data.map(food_item =>
@@ -106,7 +105,7 @@ class Cocktail_Card_Container extends Component {
     render() { 
         return ( 
         <div>
-        {this.ReptileList()}
+        {this.FoodList()}
         <CardGroup>
         </CardGroup>
        </div> );
