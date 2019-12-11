@@ -1,0 +1,19 @@
+GET http://localhost:3000/foodsite
+
+###
+
+POST   http://localhost:3000/foodsite
+Content-Type: application/json
+
+{
+        "Name": "Blue Cheese Burger",
+        "Difficulty": "Normal",
+        "Ethnicity": "American",
+        "Time": "2.5",
+        "Image": "burger.jpg",
+        "Site": "https://www.allrecipes.com/recipe/24685/blue-cheese-burgers/"
+}
+
+###
+
+DELETE http://localhost:3000/foodsite/5df08df6d2c9e544bcd75706
