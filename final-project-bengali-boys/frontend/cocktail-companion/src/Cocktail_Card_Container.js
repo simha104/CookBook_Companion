@@ -3,96 +3,13 @@ import Cocktail_Card from './Cocktail_Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Top_NavBar from './Top_NavBar';
 
-//[
-//     {
-//         "Name": "Blue Cheese Burger",
-//         "Difficulty": "Normal",
-//         "Ethnicity": "American",
-//         "Time": "2.5",
-//         "Image": "burger.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/24685/blue-cheese-burgers/"
-//     },
-//     {
-//         "Name": "Margherita Pizza",
-//         "Difficulty": "Easy",
-//         "Ethnicity": "Italian",
-//         "Time": "0.5",
-//         "Image": "pizza.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/275573/margherita-pizza-with-sausage-and-pesto/"
-//     },
-//     {
-//         "Name": "Japanese Curry",
-//         "Difficulty": "Hard",
-//         "Ethnicity": "Asian",
-//         "Time": "1.5",
-//         "Image": "curry.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/274077/japanese-curry/"
-//     },
-//     {
-//         "Name": "Pasta Pomodoro",
-//         "Difficulty": "Normal",
-//         "Ethnicity": "Italian",
-//         "Time": "0.5",
-//         "Image": "pasta.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/23847/pasta-pomodoro/"
-//     },
-//     {
-//         "Name": "Beef Lasagana",
-//         "Difficulty": "Hard",
-//         "Ethnicity": "Italian",
-//         "Time": "1.5",
-//         "Image": "lasagna.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/220346/eggplant-and-ground-beef-lasagna/"
-//     },
-//     {
-//         "Name": "Pork Fried Rice",
-//         "Difficulty": "Normal",
-//         "Ethnicity": "Asian",
-//         "Time": "0.5",
-//         "Image": "rice.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/230818/pork-fried-rice/"
-//     },
-//     {
-//         "Name": "Chicken Quesadillas",
-//         "Difficulty": "Easy",
-//         "Ethnicity": "Mexican",
-//         "Time": "1.0",
-//         "Image": "quesadilla.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/21659/chicken-quesadillas/"
-//     },
-//     {
-//         "Name": "Fish Tacos",
-//         "Difficulty": "Easy",
-//         "Ethnicity": "Mexican",
-//         "Time": "1.0",
-//         "Image": "tacos.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
-//     },
-//     {
-//         "Name": "Filipino Adobo",
-//         "Difficulty": "Easy",
-//         "Ethnicity": "Asian",
-//         "Time": "1.0",
-//         "Image": "adobo.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/128699/famous-chicken-adobo/"
-//     },
-//     {
-//         "Name": "Fluffy Pancakes",
-//         "Difficulty": "Hard",
-//         "Ethnicity": "American",
-//         "Time": "0.5",
-//         "Image": "pancakes.jpg",
-//         "Site:": "https://www.allrecipes.com/recipe/162760/fluffy-pancakes/"
-//     }
-// ]
-
-//bruh
 
 class Cocktail_Card_Container extends Component {
     constructor(props) {
         super(props);
         this.state = {
             food_item: [],
+            print_food: [],
             prev_filters: this.props.filter,
 
         }
@@ -121,37 +38,35 @@ class Cocktail_Card_Container extends Component {
         return true;
     }
 
-    componentWillReceiveProps(){
-            this.state.food_item = [];
-            console.log("filters changed");
-            this.setState({food_item: this.state.food_item});
-            this.ApplyFilters();
-        
-    }
+    // componentWillReceiveProps(){
+    //         console.log("filters changed");
+    //         console.log(this.props.filter);
+    //         this.setState({food_item: this.state.food_item});
+    //         this.ApplyFilters();        
+    // }
 
     componentWillMount(){
         this.retrieve_food();
     }
 
     ApplyFilters(){
-        let temp = this.state.food_item;
-        this.state.food_item = [];
-        if(this.props.filter){
-            for(let i = 0; i < temp.length; i++){
-                if(this.CheckFilters(temp[i])){
-                    this.state.food_item.push(temp[i]);
+        this.state.print_food =[];
+            for(let i = 0; i < this.state.food_item.length; i++){
+                if(this.CheckFilters(this.state.food_item[i])){
+                    console.log("filtered post:");
+                    console.log(this.state.food_item[i]);
+                    this.state.print_food.push(this.state.food_item[i]);
                 }
             }
-        }
-        this.retrieve_food = this.retrieve_food.bind(this);
-        
+             
     }
 
     FoodList() {
+        this.ApplyFilters();
         return (
           <div>
-            {this.state.food_item.map(food_list =>
-                 <Cocktail_Card Name={food_list.Name} Site={food_list.Site} Difficulty={food_list.Difficulty} Ethnicity={food_list.Ethnicity} Time={food_list.Time} Image={"/assets/"+food_list.Image} Site={food_list.Site}></Cocktail_Card>
+            {this.state.print_food.map(food_list =>
+                 <Cocktail_Card Id = {food_list._id} Name={food_list.Name} Site={food_list.Site} Difficulty={food_list.Difficulty} Ethnicity={food_list.Ethnicity} Time={food_list.Time} Image={"/assets/"+food_list.Image} Site={food_list.Site}></Cocktail_Card>
                  )}
           </div>
         );
@@ -170,7 +85,7 @@ class Cocktail_Card_Container extends Component {
 
                     // Examine the text in the response
                     response.json().then(function (data) {
-                        this.setState({food_items: data});
+                        this.setState({food_item: data});
                     }.bind(this));
                 }.bind(this)
             )
