@@ -7,12 +7,25 @@ class Cocktail_Card extends Component {
         super(props);
         this.state = {}
         this.handleClick = this.handleClick.bind(this);
+        this.handleDeleteClick = this.handleDeleteClick.bind(this);
     }
 
 
     handleClick(){
         window.open(this.props.Site);
         console.log(this.props.Site);
+    }
+
+    handleDeleteClick(){
+        console.log(this.props.Id);
+        var each_id = this.props.Id;
+
+        fetch('http://localhost:3000/foodsite/' + this.props.Id, {
+            method: 'DELETE',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({id: each_id})
+        })
+        window.location.reload(true);
     }
 
     render() {
@@ -22,6 +35,7 @@ class Cocktail_Card extends Component {
                 <Card.Body>
                     <Card.Title>{this.props.Name}</Card.Title>
                     <Button variant="primary" onClick = {this.handleClick}>Recipe</Button>
+                    <Button variant="danger" onClick = {this.handleDeleteClick}>Delete</Button>
                 </Card.Body>
             </Card>
         );
