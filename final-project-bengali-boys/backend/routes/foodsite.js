@@ -13,11 +13,6 @@ router.get('/', async function(req, res) {
     }
 });
 
-//recieve individual post
-router.get('/:id', get_food, function(req, res) {
-    res.json(res.a_food);
-});
-
 //create a post
 router.post('/', async function(req, res) {
     const a_food = new food({
@@ -37,35 +32,6 @@ router.post('/', async function(req, res) {
     }
 });
 
-//updating post
-router.patch('/:id', get_food, async function(req, res) {
-    if (res.body.Name != null){
-        res.a_food.Name = req.body.Name;
-    }
-    if (req.body.Difficulty != null){
-        res.a_food.Difficulty = req.body.Difficulty;
-    }
-    if (req.body.Ethnicity != null){
-        res.a_food.Ethnicity = req.body.Ethnicity;
-    }
-    if (req.body.Time != null){
-        res.a_food.Time = req.body.Time;
-    }
-    if (req.body.Image != null){
-        res.a_food.Image = req.body.Image;
-    }
-    if (req.body.Site != null){
-        res.a_food.Site = req.body.Site;
-    }
-
-    try {
-        const updated_a_food = await res.a_food.save();
-        res.json(updated_a_food);
-    }
-    catch (err){
-        res.status(400).json({message: err.message});
-    }
-});
 
 //deleting post
 router.delete('/:id', get_food, async function(req,res) {
