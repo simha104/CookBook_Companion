@@ -4,7 +4,7 @@
         "Difficulty": "Normal",
         "Ethnicity": "American",
         "Time": "2.5",
-        "Image": "burger.jpg",
+        "Image": "/assets/burger.jpg",
         "Site": "https://www.allrecipes.com/recipe/24685/blue-cheese-burgers/"
     },
     {
@@ -12,7 +12,7 @@
         "Difficulty": "Easy",
         "Ethnicity": "Italian",
         "Time": "0.5",
-        "Image": "pizza.jpg",
+        "Image": "/assets/pizza.jpg",
         "Site": "https://www.allrecipes.com/recipe/275573/margherita-pizza-with-sausage-and-pesto/"
     },
     {
@@ -20,7 +20,7 @@
         "Difficulty": "Hard",
         "Ethnicity": "Asian",
         "Time": "1.5",
-        "Image": "curry.jpg",
+        "Image": "/assets/curry.jpg",
         "Site": "https://www.allrecipes.com/recipe/274077/japanese-curry/"
     },
     {
@@ -28,7 +28,7 @@
         "Difficulty": "Normal",
         "Ethnicity": "Italian",
         "Time": "0.5",
-        "Image": "pasta.jpg",
+        "Image": "/assets/pasta.jpg",
         "Site": "https://www.allrecipes.com/recipe/23847/pasta-pomodoro/"
     },
     {
@@ -36,7 +36,7 @@
         "Difficulty": "Hard",
         "Ethnicity": "Italian",
         "Time": "1.5",
-        "Image": "lasagna.jpg",
+        "Image": "/assets/lasagna.jpg",
         "Site": "https://www.allrecipes.com/recipe/220346/eggplant-and-ground-beef-lasagna/"
     },
     {
@@ -44,7 +44,7 @@
         "Difficulty": "Normal",
         "Ethnicity": "Asian",
         "Time": "0.5",
-        "Image": "rice.jpg",
+        "Image": "/assets/rice.jpg",
         "Site": "https://www.allrecipes.com/recipe/230818/pork-fried-rice/"
     },
     {
@@ -52,7 +52,7 @@
         "Difficulty": "Easy",
         "Ethnicity": "Mexican",
         "Time": "1.0",
-        "Image": "quesadilla.jpg",
+        "Image": "/assets/quesadilla.jpg",
         "Site": "https://www.allrecipes.com/recipe/21659/chicken-quesadillas/"
     },
     {
@@ -60,7 +60,7 @@
         "Difficulty": "Easy",
         "Ethnicity": "Mexican",
         "Time": "1.0",
-        "Image": "tacos.jpg",
+        "Image": "/assets/tacos.jpg",
         "Site": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
     },
     {
@@ -68,7 +68,7 @@
         "Difficulty": "Easy",
         "Ethnicity": "Asian",
         "Time": "1.0",
-        "Image": "adobo.jpg",
+        "Image": "/assets/adobo.jpg",
         "Site": "https://www.allrecipes.com/recipe/128699/famous-chicken-adobo/"
     },
     {
@@ -76,7 +76,7 @@
         "Difficulty": "Hard",
         "Ethnicity": "American",
         "Time": "0.5",
-        "Image": "pancakes.jpg",
+        "Image": "/assets/pancakes.jpg",
         "Site": "https://www.allrecipes.com/recipe/162760/fluffy-pancakes/"
     }
 ]

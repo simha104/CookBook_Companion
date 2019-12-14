@@ -11,7 +11,7 @@ class Header extends Component {
         return (
             <div>
                 <Container style={{}}>
-                    <h1 style={{position: 'relative'}}>Cookbook Companion</h1>
+                    <h1 style={{position: 'relative', fontSize: '70px', fontWeight: 'bold', left: '185px', color: '#007bff'}}>Cookbook Companion</h1>
                     {/* <Image style={{position: 'relative', height: 'auto', width: '100%' }} src="/assets/header.jpg" /> */}
 
                 </Container>

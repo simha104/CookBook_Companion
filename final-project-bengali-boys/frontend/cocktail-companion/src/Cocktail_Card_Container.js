@@ -66,7 +66,7 @@ class Cocktail_Card_Container extends Component {
         return (
           <div>
             {this.state.print_food.map(food_list =>
-                 <Cocktail_Card Id = {food_list._id} Name={food_list.Name} Site={food_list.Site} Difficulty={food_list.Difficulty} Ethnicity={food_list.Ethnicity} Time={food_list.Time} Image={"/assets/"+food_list.Image} Site={food_list.Site}></Cocktail_Card>
+                 <Cocktail_Card Id = {food_list._id} Name={food_list.Name} Site={food_list.Site} Difficulty={food_list.Difficulty} Ethnicity={food_list.Ethnicity} Time={food_list.Time} Image={food_list.Image} Site={food_list.Site}></Cocktail_Card>
                  )}
           </div>
         );

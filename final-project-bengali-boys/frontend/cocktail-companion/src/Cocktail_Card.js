@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button'
-//bruh
+
 class Cocktail_Card extends Component {
     constructor(props) {
         super(props);

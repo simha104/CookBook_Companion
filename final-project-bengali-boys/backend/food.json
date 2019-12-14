@@ -22,7 +22,7 @@
         "Time": "1.5",
         "Image": "curry.jpg",
         "Site:": "https://www.allrecipes.com/recipe/274077/japanese-curry/"
-    },
+    }
     {
         "Name": "Pasta Pomodoro",
         "Difficulty": "Normal",
@@ -60,7 +60,7 @@
         "Difficulty": "Easy",
         "Ethnicity": "Mexican",
         "Time": "1.0",
-        "Image": "tacos",
+        "Image": "tacos.jpg",
         "Site:": "https://www.allrecipes.com/recipe/53729/fish-tacos/"
     },
     {
